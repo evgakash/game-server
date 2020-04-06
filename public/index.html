@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css" >
+</head>
+<body>
+	<main class="waiting">
+		<div class="pole">
+			<h2>Подождите подключения следующего игрока</h2>
+		</div>
+		
+	</main>
+
+	<main class="game" hidden>
+		<h2>Ход противника</h2>
+		<div class="pole" hidden>
+			<div class="block" hidden>
+			   <button  class="num" >1</button>
+			   <button  class="num" >2</button>
+			   <button  class="num" >3</button>
+			</div>
+
+			<div class="block stolb"  hidden>
+			  <p></p>
+			   <div class="clr red">0</div>
+			   <input type="range" class="schet" id="red" min="0" max="2" value="0">
+			  <div class="clr black" >0</div>
+			  <input type="range" class="schet" id="blacл" min="0" max="2" value="0">
+			   <button  >Далее</button>
+			</div>
+
+			 <div class="block stolb" hidden>
+			  <p></p>
+			   <div class="zn">
+				 <div class="suit red" value="0">♥</div>
+				 <div class="suit red" value="0">♦</div>
+			   </div>
+			   <p></p>
+			   <div class="zn">
+				 <div class="suit black" value="0">♣</div>
+				 <div class="suit black" value="0">♠</div>
+			   </div>
+			   <button  >Далее</button>
+			</div>
+		</div>
+		<div class="enem" ></div>
+		<div class="stopka" >
+		  <div class="stopk" ></div>
+		</div>
+		<div class="you" ><div class="chest"></div></div> 
+	</main>
+	
+	<main class="result" hidden>
+		<div class="pole">
+			<h2>Игра закончена</h2>
+			<p class='result'>Игра прервана</p>
+			<button type="button" class="restart">Перезапустить</button>
+		</div>
+	</main>
+
+	<script type="module" src="scripts/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+/* CSS files add styling rules to your content */
+
+[hidden]{
+    display:none!important;
+  }
+  body {
+    background: #c7b39b
+      url(https://www.nastol.com.ua/pic/201608/1680x1050/nastol.com.ua-183578.jpg);
+    background-size: 100% auto;
+  }
+  
+  div.block {
+  
+    display: flex;
+    
+    height: 170px;
+    margin: 0 auto;
+    background: #cc6600
+      url(https://c7.uihere.com/files/166/180/895/woodgrain-background.jpg);
+    width: 300px;
+    padding-top: 10px;
+    margin-top: 100px;
+    border-radius: 10px;
+  }
+  
+  #bl {
+    /*для текста победителя*/
+    text-align: center;
+    /*align-items: center;
+    justify-content: center;*/
+  }
+  
+  .pole  /*затемнение*/
+   {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.5);
+  }
+  
+  div {
+    margin: 0 auto;
+    border-radius: 5px;
+    display: flex;
+    color: #ffe4c4;
+  }
+  
+  p {
+    margin: 0px 0px 5px 10px;
+    color: black;
+    font-weight: bold;
+  }
+
+  p.result {
+    margin: 0px 0px 5px 10px;
+    color: #f2ad46;
+    font-weight: bold;
+  }
+
+  h2 {
+    margin: 0px 0px 5px 10px;
+    color: #f2ad46;
+    font-weight: bold;
+  }
+  
+  input {
+    background: #f2ad46;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+  }
+  input.schet {
+    height: 15px;
+    margin-top: 2px;
+    display: flex;
+  }
+  input.vvod {
+    height: 30px;
+    width: 230px;
+  }
+  input#password {
+    margin-top: 10px;
+  }
+  
+  button {
+    background: #f2ad46;
+    height: 30px;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: flex;
+    color: black;
+  }
+  
+  button.go {
+    width: 60px;
+    margin-top: 20px;
+  }
+  button.go:hover {
+    background: #ffd700;
+  }
+  /*==========================================================*/
+  button.play {
+    margin-top: 60px;
+    width: 100px;
+  }
+  button.play:hover {
+    background: #ffd700;
+  }
+  /*==========================================================*/
+  
+  div.enem {
+     height: 170px;
+    margin: 0 auto;
+    width: 60%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  div.stopka {
+    height: 170px;
+    width: 75%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .stopk {
+    margin: inherit;
+    height: 150px;
+    width: 100px;
+    background: blue
+      url(https://i.pinimg.com/474x/bc/92/9f/bc929f4de35b5695766f041cebd2023a--playing-card-design-skull-art.jpg);
+    background-size: cover;
+    box-shadow: 5px 0 0 3px white;
+    border: 3px outset black;
+    border-radius: 10px;
+    color: white;
+    justify-content: center;
+    font-size: 40px;
+  }
+  
+  div.you {
+     height: 170px;
+    margin: 0 auto;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  div.chest {
+    background: url(http://www.clubpenguinwiki.info/static/images/www/thumb/8/8c/Treasure_Chest.PNG/240px-Treasure_Chest.PNG);
+    background-size: cover;
+    padding-top: 50px;
+    width: 220px;
+    height: 170px;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: center;
+    text-decoration-color: #ffe4c4;
+    font-size: 36px;
+  }
+  
+  div.karta {
+    margin: 5px;
+    background: blue
+      url(https://i.pinimg.com/474x/bc/92/9f/bc929f4de35b5695766f041cebd2023a--playing-card-design-skull-art.jpg);
+    background-size: cover;
+    height: 150px;
+    width: 100px;
+    text-decoration-color: #ffe4c4;
+  }
+  
+  button.ukarta {
+    margin: 5px;
+    background: blue;
+    height: 150px;
+    width: 100px;
+    justify-content: center;
+    font-size: 30px;
+    color: #ffe4c4;
+  }
+  
+  button.ukarta:hover {
+    box-shadow: 0 0 10px 7px #ffd700;
+  }
+
+  button.ukartaSleep {
+    margin: 5px;
+    background: blue;
+    height: 150px;
+    width: 100px;
+    justify-content: center;
+    font-size: 30px;
+    color: #ffe4c4;
+  }
+  
+  button.vbr {
+    margin: 5px;
+    background: blue;
+    height: 180px;
+    width: 130px;
+    color: #ffe4c4;
+    justify-content: center;
+    font-size: 30px;
+  }
+  
+  /*==========================================================*/
+  
+  button.num {
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    color: black;
+    justify-content: center;
+    font-size: 36px;
+  }
+  button.num:hover {
+    box-shadow: 0 0 10px 7px #ffd700;
+  }
+  /*==========================================================*/
+  div.stolb
+  {
+    flex-direction: column;
+  }
+  div.clr {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: center;
+    background: red;
+  }
+  div#black {
+    background: black;
+  }
+  
+  /*==========================================================*/
+  div.zn {
+    background: 0;
+    height: 45px;
+  }
+  
+  div.suit {
+    width: 50px;
+    height: 40px;
+    margin-right:20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  div.suit:hover {
+    box-shadow: 0 0 10px 7px #ffd700;
+  }
+  
+  div.pom {
+    box-shadow: 0 0 10px 7px #ffd700;
+  }
+  div.red {
+    background: red;
+  }
+  div.black {
+    background: black;
+  }
+  
