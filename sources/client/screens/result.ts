@@ -1,11 +1,11 @@
 /**
  * Сообщение с итогом игры
  */
-const message = document.querySelector( 'main.result>div.pole>p' ) as HTMLParagraphElement;
+const message = document.querySelector( 'main.result>div.pole>div.block>p' ) as HTMLParagraphElement;
 /**
  * Кнопка перезапуска игры
  */
-const restart = document.querySelector( 'main.result>div.pole>button.restart' ) as HTMLButtonElement;
+const restart = document.querySelector( 'main.result>div.pole>div.block>button.restart' ) as HTMLButtonElement;
 
 if ( !message || !restart )
 {
