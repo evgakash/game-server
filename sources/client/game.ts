@@ -178,9 +178,11 @@ function dobavCards(arr:number[]): void
 {
 	const kolvo = GameScreen.dobav(arr);
 	if(kolvo<1)
+	{
 		sendMessage( {
 		type: 'repeatCart',
 		} )
+	}
 	else
 		sendMessage( {
 		type: 'OtherPlayerCards',

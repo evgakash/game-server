@@ -11,7 +11,7 @@ import type {
 /**
  * колода
  */
-let arr: number[]=[];
+let arr: number[];
 /**
  * карты игрока, у которого отгадывают карты
  */
@@ -25,13 +25,12 @@ let sumChests:number;
 /**
  * Функция перемешевания карт
  * 
- * @param array значение карт
  */
-function shuffle(array: number[]): void {
+function shuffle(): void {
 	arr.length=0;
 	for (let i = 0; i < 36; ++i)
 		arr.push(i);
-	array.sort(() => Math.random() - 0.5);
+	arr.sort(() => Math.random() - 0.5);
 }
 
 /**
@@ -104,8 +103,12 @@ class Game {
 	private _sendStartMessage(): Promise<void[]> {
 	//	this._playersState = new WeakMap();
 		sumChests=0;
-		otherPlayerHave=[];
-		shuffle(arr);
+		if(otherPlayerHave)
+			otherPlayerHave.length=0;
+		else
+			otherPlayerHave=[];
+		arr=[];
+		shuffle();
 		let card: number[];
 		card = arr.splice(0, 4);
 		const data: GameStartedMessage = {
@@ -120,7 +123,6 @@ class Game {
 			data.myTurn = false;
 			data.cards = card;
 		}
-
 		return Promise.all(promises);
 	}
 
@@ -130,14 +132,17 @@ class Game {
 	private _sendNewCartMessage(player: WebSocket) {
 		let card: number[]=[];
 		if(arr.length>0)
+		{
 			card = arr.splice(0, 1);
-		this._sendMessage(
+			this._sendMessage(
 			player,
 			{
 				type: 'playerNewCards',
 				cards: card,
 			},
 		).catch(onError);
+		}
+			
 	}
 
 	/**
@@ -515,6 +520,8 @@ private _endGame(currentPlayer: WebSocket, chests:number)
 	{
 	++sumChests;
 	if(sumChests==9)
+	{
+		arr.length=0;
 		for(const player of this._session)
 		{
 			if(player===currentPlayer)
@@ -537,6 +544,8 @@ private _endGame(currentPlayer: WebSocket, chests:number)
 				.catch( onError );
 		}
 	}
+	}
+		
 }
 
 
